@@ -1,0 +1,23 @@
+section{
+    margin-top: 64px;
+    background-color:rgb(37, 38, 39);
+}
+
+mat-divider{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.icon{
+    background-color: rgb(66, 61, 61);
+}
+section h3{
+    color: aliceblue;
+    position: sticky;
+    
+}
+
+.name, .artistName{
+    color: aliceblue;
+    margin: 0%;
+}

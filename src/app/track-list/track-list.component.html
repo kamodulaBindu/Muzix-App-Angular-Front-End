@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/icon/icon?family=Material+Icons" rel="styleSheet">
+  </head>
+  <body>
+    <section>
+<div class="body">
+  {{errorMessage}}
+  <h4 mat-subheader class="searchResult">Top Tracks</h4>
+  <div class="flex-container" fxLayout="row" fxLayout.xs="row">
+    <!-- <button mat-mini-fab class="previousButton">
+      <i (click)="previous()" class="material-icons">keyboard_arrow_left</i>
+    </button> -->
+    <div class="splash" *ngFor="let track of tracks">
+      <mat-card fxFlex="80%" fxFlex.xs="80%" class="card">       
+          <!-- <img class="images" mat-card-image src="{{track.image[1]['#text']}}" alt="{{track.name}}"> -->
+          <img class="images" mat-card-image src="assets/images/logo.jpg" alt="{{track.name}}">
+          <a>
+            <i class="material-icons">
+              play_circle_filled 
+            </i>
+          </a>
+          <mat-card-content class="card-content">
+          
+          
+              <p id="trackName">{{track.name}}</p>
+              <p id="artistName">{{track.artist.name}}</p>
+              <p id="duration">{{track.duration}}</p>
+          </mat-card-content>
+          <a routerLink="/saveTrack"> <button mat-mini-fab (click)="createTrack(track)"  class="icon"><i class="material-icons">favorite_border</i></button></a>
+      </mat-card>
+    </div>
+    <div>
+      <!-- <button mat-mini-fab class="nextButton">
+        <i (click)="next()" class="material-icons">keyboard_arrow_right</i>
+      </button> -->
+    </div>
+  </div>
+</div>
+</section>
+</body>
+<app-wishlist></app-wishlist>
+</html>

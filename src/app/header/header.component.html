@@ -1,0 +1,25 @@
+<header>
+       
+<mat-toolbar class="headerbg" fxLayout="column" fxLayout.xs="row">
+    <mat-toolbar-row>
+        <a routerLink="/tracks"  ><img id="logo" src="assets/images/logo.jpg"></a>
+        <a routerLink="/tracks"  ><span class="header"><h3>muzix</h3></span></a>
+      <span class="spacer"></span>
+      <form class="search">
+            <mat-form-field class="search-text-field">
+                <input #typehead matInput (input)="searching()" [formControl]="search" (keyup.enter)="searchNavigate()" placeholder="search track" [matAutocomplete]="auto">
+                <button mat-button matSuffix mat-icon-button aria-label="Search" (click)="value">
+                <mat-icon class="example-icon"  aria-hidden="false" aria-label="Example search icon">search</mat-icon>
+              </button>
+                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                  <mat-option *ngFor="let track of tracks" [value]="track.name">
+                    <span>{{track.name}}</span>
+                    <br>
+                    <small>{{track.artist}}</small>
+                  </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+        </form>
+    </mat-toolbar-row>
+</mat-toolbar>
+</header>

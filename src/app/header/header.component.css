@@ -1,0 +1,42 @@
+.example-icon {
+    padding: 0 14px;
+    color: aliceblue;
+    position: relative;
+    float: right;
+}
+
+.row{
+    padding-top: 40px;
+}
+
+.search{
+    color: aliceblue;
+    position: relative;
+    
+}
+.header{
+    color: aliceblue;
+    font-size: 20px;
+    text-align: center;
+
+}
+.mat-option{
+    margin: 1px;
+    line-height: normal;
+}
+.spacer {
+    flex: 1 1 auto;
+}
+
+#logo{
+    padding-top: 20px;
+    height: 60px;
+    align-content: center;
+}
+
+.headerbg{
+    position:fixed;
+    background-color:rgb(37, 38, 39);  
+    top: 0; 
+    z-index: 999;    
+}

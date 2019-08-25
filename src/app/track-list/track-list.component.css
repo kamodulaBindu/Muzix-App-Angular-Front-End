@@ -1,0 +1,108 @@
+body {
+  margin-top: 0px;
+  background-color:rgb(40, 41, 42);
+}
+
+.body{
+  margin-top: 20px;
+}
+.card {
+  margin-top: 8px;
+  position: relative;
+  width: 250px;
+  box-sizing: border-box;
+  border-style: solid;
+  align-content: center;
+  margin-bottom: 8px;
+  background-color: rgb(84, 92, 90);
+}
+section{
+  margin-top: 60px;
+  margin-left: 16px;
+  margin-right: 16px;
+  overflow: auto;
+
+}
+
+::-webkit-scrollbar{
+  width: 0px;
+  background: transparent;
+}
+section h4{
+  color: aliceblue;
+}
+
+ .mat-flat-button.mat-accent, .mat-raised-button.mat-accent, .mat-fab.mat-accent, .mat-mini-fab.mat-accent{
+  background-color:rgba(194, 177, 177, 0.199);
+  
+  
+}
+.toptracks h5{
+  color: aliceblue;
+  position: relative;
+  
+
+}
+.flex-continer{
+  margin-top: 100px;
+}
+.previousButton{
+  color: black;
+  background-color: black;
+  margin: auto;
+}
+
+.nextButton{
+  color: black;
+  background-color: black;
+  margin: auto;
+  margin-top: 95px;
+}
+
+.images{
+  align-content: center;
+  padding-left: 30px; 
+  margin-top:20px;
+  padding-top: 10px;
+}
+
+.mat-card-content p{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inherit;
+}
+
+#trackName{
+  margin: 0px;
+  font-size: 20px;
+  color: aliceblue;
+}
+#artistName{
+  margin: 0px;
+  color: aliceblue;
+}
+#duration{
+  margin: 0px;
+  color: aliceblue;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.cardList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  width: fit-content;
+  text-overflow: ellipsis;
+}
+
+.button1, .button2{
+  align-content: center;
+  padding-right: 20px;
+}
+

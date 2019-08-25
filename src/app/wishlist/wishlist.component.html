@@ -1,0 +1,72 @@
+<!-- <section>
+    <mat-list>
+        <h3 mat-subheader>Search Results</h3>
+        <mat-divider></mat-divider>
+        <mat-list-item *ngFor="let track of tracks">
+            {{track | json}}
+             <img mat-list-icon src="assets/images/logo.jpg">
+            <h4 mat-line>{{track.name}}</h4>
+               <p mat-line>{{track.artist}}</p> -->
+           <!-- <a HREF="http://localhost:4200" style="margin-left:10px"  (click)="deleteTracks(track)" routerLink="/saveTrack">
+            <button mat-mini-fab class="icon" ><i class="material-icons">delete</i></button></a>
+        </mat-list-item>
+    </mat-list>
+</section> -->
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/icon/icon?family=Material+Icons" rel="styleSheet">
+  </head>
+  <body>
+<section>
+<div class="body">
+        {{errorMessage}}
+        <h4 mat-subheader class="searchResult">WishList</h4>
+        <div class="flex-container" fxLayout.lt-ms="column" fxLayout="row" fxLayout.xs="row">
+          <!-- <button mat-mini-fab class="previousButton">
+            <i (click)="previous()" class="material-icons">keyboard_arrow_left</i>
+          </button> -->
+          <div class="splash" *ngFor="let track of tracks">
+            <mat-card fxFlex="80%" fxFlex.xs="80%" class="card">       
+                <!-- <img class="images" mat-card-image src="{{track.image[1]['#text']}}" alt="{{track.name}}"> -->
+                <img class="images" mat-card-image src="assets/images/logo.jpg" alt="{{track.name}}">
+                <a>
+                  <i class="material-icons">
+                    play_circle_filled 
+                  </i>
+                </a>
+                <mat-card-content class="card-content">
+                    <p id="trackName">{{track.name}}</p>
+
+                    <button mat-mini-fab class="icon" ><i class="material-icons"><i className="material-icons">play_circle_outline</i> </i></button>
+                    <a href="http://localhost:4200" style="margin-left:10px"  routerLink="/saveTrack">
+                      <button mat-mini-fab class="icon" ><i class="material-icons">comments</i></button></a>
+                      <!-- <script>
+                          function MyFunction() {
+                          var d=document.getElementById("");
+                          d.innerHTML+=document.getElementById();
+                          }
+                          </script> -->
+
+                      <a href="http://localhost:4200/saveTrack" style="margin-left:10px"  (click)="deleteTracks(track)" >
+                        <button mat-mini-fab class="icon" ><i class="material-icons">delete</i></button></a><br>
+                        <!-- <p id="empty"></p> -->
+                      <!-- <div id="commentsDiv">                       -->
+                        <p class="comments"> comments Please </p><textarea [id]="track.id" class="textArea" class="comments"></textarea>
+                      <button (click)="updateTrack(track)">Submit</button>
+                    <!-- </div> -->
+ 
+                    
+
+                </mat-card-content>
+            </mat-card>
+          </div>
+          <!-- <div>
+            <button mat-mini-fab class="nextButton">
+              <i (click)="next()" class="material-icons">keyboard_arrow_right</i>
+            </button>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    </body>
+    </html>
